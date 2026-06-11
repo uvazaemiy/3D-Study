@@ -10,8 +10,7 @@ public class Bullet : MonoBehaviour
     
     private void Start()
     {
-        rb.AddForce(Vector3.forward * force, ForceMode.VelocityChange);
-        
+        rb.AddRelativeForce(Vector3.forward * force, ForceMode.VelocityChange);
         Destroy(gameObject, 5f);
     }
 
